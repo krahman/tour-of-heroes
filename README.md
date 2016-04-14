@@ -1,2 +1,1 @@
-# Angularjs2 Quickstart
-# Tour of Heroes
+\# Tour of Heroes
