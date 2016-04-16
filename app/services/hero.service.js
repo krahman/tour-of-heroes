@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./models/hero.model"], function(exports_1, context_1) {
+System.register(['angular2/core', "./../models/mock-heroes"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,35 +10,38 @@ System.register(['angular2/core', "./models/hero.model"], function(exports_1, co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_model_1;
-    var HeroDetailComponent;
+    var core_1, mock_heroes_1;
+    var HeroService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (hero_model_1_1) {
-                hero_model_1 = hero_model_1_1;
+            function (mock_heroes_1_1) {
+                mock_heroes_1 = mock_heroes_1_1;
             }],
         execute: function() {
-            HeroDetailComponent = (function () {
-                function HeroDetailComponent() {
+            HeroService = (function () {
+                function HeroService() {
                 }
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', hero_model_1.Hero)
-                ], HeroDetailComponent.prototype, "hero", void 0);
-                HeroDetailComponent = __decorate([
-                    core_1.Component({
-                        selector: 'hero-detail',
-                        templateUrl: 'app/hero-detail.html'
-                    }), 
+                HeroService.prototype.getHeroes = function () {
+                    return Promise.resolve(mock_heroes_1.HEROES);
+                };
+                HeroService.prototype.getHeroesSlowly = function () {
+                    return new Promise(function (resolve) {
+                        return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 2000);
+                    } // 2 secs delay
+                     // 2 secs delay
+                    );
+                };
+                HeroService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], HeroDetailComponent);
-                return HeroDetailComponent;
+                ], HeroService);
+                return HeroService;
             }());
-            exports_1("HeroDetailComponent", HeroDetailComponent);
+            exports_1("HeroService", HeroService);
         }
     }
 });
-//# sourceMappingURL=hero-detail.component.js.map
+//# sourceMappingURL=hero.service.js.map
