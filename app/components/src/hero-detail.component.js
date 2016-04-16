@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./models/hero.model", "./services/hero.service", "angular2/router"], function(exports_1, context_1) {
+System.register(['angular2/core', "angular2/router", "../../services/hero.service", "../../models/hero.model"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,21 +10,21 @@ System.register(['angular2/core', "./models/hero.model", "./services/hero.servic
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_model_1, hero_service_1, router_1;
+    var core_1, router_1, hero_service_1, hero_model_1;
     var HeroDetailComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (hero_model_1_1) {
-                hero_model_1 = hero_model_1_1;
+            function (router_1_1) {
+                router_1 = router_1_1;
             },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
             },
-            function (router_1_1) {
-                router_1 = router_1_1;
+            function (hero_model_1_1) {
+                hero_model_1 = hero_model_1_1;
             }],
         execute: function() {
             HeroDetailComponent = (function () {
@@ -48,8 +48,8 @@ System.register(['angular2/core', "./models/hero.model", "./services/hero.servic
                 HeroDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'hero-detail',
-                        templateUrl: 'app/hero-detail.html',
-                        styleUrls: ['app/hero-detail.component.css']
+                        templateUrl: './app/components/view/hero-detail.html',
+                        styleUrls: ['./app/components/style/hero-detail.component.css']
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.RouteParams])
                 ], HeroDetailComponent);

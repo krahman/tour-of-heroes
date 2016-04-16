@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./services/hero.service", "angular2/router"], function(exports_1, context_1) {
+System.register(['angular2/core', "angular2/router", "../../services/hero.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,18 +10,18 @@ System.register(['angular2/core', "./services/hero.service", "angular2/router"],
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_service_1, router_1;
+    var core_1, router_1, hero_service_1;
     var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (hero_service_1_1) {
-                hero_service_1 = hero_service_1_1;
-            },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
             }],
         execute: function() {
             DashboardComponent = (function () {
@@ -37,14 +37,13 @@ System.register(['angular2/core', "./services/hero.service", "angular2/router"],
                 };
                 DashboardComponent.prototype.gotoDetail = function (hero) {
                     var link = ['HeroDetail', { id: hero.id }];
-                    console.log(link);
                     this._router.navigate(link);
                 };
                 DashboardComponent = __decorate([
                     core_1.Component({
                         selector: 'my-dashboard',
-                        templateUrl: 'app/dashboard.html',
-                        styleUrls: ['app/dashboard.component.css']
+                        templateUrl: './app/components/view/dashboard.html',
+                        styleUrls: ['./app/components/style/dashboard.component.css']
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router])
                 ], DashboardComponent);

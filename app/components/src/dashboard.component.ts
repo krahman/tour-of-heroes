@@ -1,12 +1,12 @@
 import {Component, OnInit} from 'angular2/core';
-import {HeroService} from "./services/hero.service";
-import {Hero} from "./models/hero.model";
+import {Hero} from "./../../models/hero.model.ts";
 import {Router} from "angular2/router";
+import {HeroService} from "../../services/hero.service";
 
 @Component({
     selector: 'my-dashboard',
-    templateUrl: 'app/dashboard.html',
-    styleUrls: ['app/dashboard.component.css']
+    templateUrl: './app/components/view/dashboard.html',
+    styleUrls: ['./app/components/style/dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit {
@@ -24,7 +24,6 @@ export class DashboardComponent implements OnInit {
 
     gotoDetail(hero:Hero) {
         let link = ['HeroDetail', {id: hero.id}];
-        console.log(link);
         this._router.navigate(link);
     }
 }
