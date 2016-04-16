@@ -1,3 +1,8 @@
 <h1>{{title}}</h1>
 <h2>My Heroes</h2>
-<hero-app [heroes]="heroes"></hero-app>
+<!--<hero-app [heroes]="heroes">Heroes</hero-app>-->
+<nav>
+    <a [routerLink]="['Dashboard']">Dashboard</a>
+    <a [routerLink]="['Heroes']">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
