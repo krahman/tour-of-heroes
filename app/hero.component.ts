@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {HeroDetailComponent} from './hero-detail.component';
 
 export class Hero {
     id: number;
@@ -6,9 +7,9 @@ export class Hero {
 }
 
 @Component({
-    selector: 'my-app',
-    templateUrl: 'app/my-hero-detail.html',
-    inputs: ['hero']
+    selector: 'hero-app',
+    templateUrl: 'app/hero.html',
+    directives: [HeroDetailComponent]
 })
 
 export class AppComponent {
