@@ -1,10 +1,6 @@
 import {Component} from 'angular2/core';
+import {Hero} from "./models/hero.model.ts";
 import {HeroDetailComponent} from './hero-detail.component';
-
-export class Hero {
-    id: number;
-    name: string;
-}
 
 @Component({
     selector: 'hero-app',
@@ -12,11 +8,9 @@ export class Hero {
     directives: [HeroDetailComponent]
 })
 
-export class AppComponent {
-    title = 'Tour of Heroes';
+export class HeroComponent {
     heroes = HEROES;
     selectedHero: Hero = null;
-
     onSelect(hero: Hero) {
         this.selectedHero = hero;
     }

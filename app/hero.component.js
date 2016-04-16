@@ -11,7 +11,7 @@ System.register(['angular2/core', './hero-detail.component'], function(exports_1
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, hero_detail_component_1;
-    var Hero, AppComponent, HEROES;
+    var HeroComponent, HEROES;
     return {
         setters:[
             function (core_1_1) {
@@ -21,32 +21,25 @@ System.register(['angular2/core', './hero-detail.component'], function(exports_1
                 hero_detail_component_1 = hero_detail_component_1_1;
             }],
         execute: function() {
-            Hero = (function () {
-                function Hero() {
-                }
-                return Hero;
-            }());
-            exports_1("Hero", Hero);
-            AppComponent = (function () {
-                function AppComponent() {
-                    this.title = 'Tour of Heroes';
+            HeroComponent = (function () {
+                function HeroComponent() {
                     this.heroes = HEROES;
                     this.selectedHero = null;
                 }
-                AppComponent.prototype.onSelect = function (hero) {
+                HeroComponent.prototype.onSelect = function (hero) {
                     this.selectedHero = hero;
                 };
-                AppComponent = __decorate([
+                HeroComponent = __decorate([
                     core_1.Component({
                         selector: 'hero-app',
                         templateUrl: 'app/hero.html',
                         directives: [hero_detail_component_1.HeroDetailComponent]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], HeroComponent);
+                return HeroComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("HeroComponent", HeroComponent);
             HEROES = [
                 { "id": 11, "name": "Mr. Nice" },
                 { "id": 12, "name": "Narco" },

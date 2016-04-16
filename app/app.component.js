@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./hero.component"], function(exports_1, context_1) {
+System.register(['angular2/core', './hero.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,7 +11,7 @@ System.register(['angular2/core', "./hero.component"], function(exports_1, conte
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, hero_component_1;
-    var HeroDetailComponent;
+    var AppComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,25 +21,22 @@ System.register(['angular2/core', "./hero.component"], function(exports_1, conte
                 hero_component_1 = hero_component_1_1;
             }],
         execute: function() {
-            HeroDetailComponent = (function () {
-                function HeroDetailComponent() {
+            AppComponent = (function () {
+                function AppComponent() {
+                    this.title = 'Tour of Heroes';
                 }
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', (typeof (_a = typeof hero_component_1.Hero !== 'undefined' && hero_component_1.Hero) === 'function' && _a) || Object)
-                ], HeroDetailComponent.prototype, "hero", void 0);
-                HeroDetailComponent = __decorate([
+                AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'hero-detail',
-                        templateUrl: 'app/hero-detail.html'
+                        selector: 'my-app',
+                        templateUrl: 'app/app.html',
+                        directives: [hero_component_1.HeroComponent]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], HeroDetailComponent);
-                return HeroDetailComponent;
-                var _a;
+                ], AppComponent);
+                return AppComponent;
             }());
-            exports_1("HeroDetailComponent", HeroDetailComponent);
+            exports_1("AppComponent", AppComponent);
         }
     }
 });
-//# sourceMappingURL=hero-detail.component.js.map
+//# sourceMappingURL=app.component.js.map
