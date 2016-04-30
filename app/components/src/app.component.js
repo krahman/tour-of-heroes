@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', "./hero.component", "./dashboard.component", "./hero-detail.component", "../../services/hero.service"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../services/hero.service", "./heroes.component", "./dashboard.component", "./hero-detail.component", 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,18 +10,18 @@ System.register(['angular2/core', 'angular2/router', "./hero.component", "./dash
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, hero_component_1, dashboard_component_1, hero_detail_component_1, hero_service_1;
+    var core_1, hero_service_1, heroes_component_1, dashboard_component_1, hero_detail_component_1, router_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (router_1_1) {
-                router_1 = router_1_1;
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
             },
-            function (hero_component_1_1) {
-                hero_component_1 = hero_component_1_1;
+            function (heroes_component_1_1) {
+                heroes_component_1 = heroes_component_1_1;
             },
             function (dashboard_component_1_1) {
                 dashboard_component_1 = dashboard_component_1_1;
@@ -29,8 +29,8 @@ System.register(['angular2/core', 'angular2/router', "./hero.component", "./dash
             function (hero_detail_component_1_1) {
                 hero_detail_component_1 = hero_detail_component_1_1;
             },
-            function (hero_service_1_1) {
-                hero_service_1 = hero_service_1_1;
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -42,7 +42,7 @@ System.register(['angular2/core', 'angular2/router', "./hero.component", "./dash
                         {
                             path: '/heroes',
                             name: 'Heroes',
-                            component: hero_component_1.HeroComponent
+                            component: heroes_component_1.HeroesComponent
                         },
                         {
                             path: '/dashboard',
@@ -51,7 +51,7 @@ System.register(['angular2/core', 'angular2/router', "./hero.component", "./dash
                             useAsDefault: true
                         },
                         {
-                            path: '/heroes/:id',
+                            path: '/detail/:id',
                             name: 'HeroDetail',
                             component: hero_detail_component_1.HeroDetailComponent
                         }
@@ -60,8 +60,8 @@ System.register(['angular2/core', 'angular2/router', "./hero.component", "./dash
                         selector: 'my-app',
                         templateUrl: './app/components/view/app.html',
                         styleUrls: ['./app/components/style/app.component.css'],
-                        directives: [hero_component_1.HeroComponent, router_1.ROUTER_DIRECTIVES],
-                        providers: [hero_service_1.HeroService, router_1.ROUTER_PROVIDERS]
+                        directives: [router_1.ROUTER_DIRECTIVES],
+                        providers: [router_1.ROUTER_PROVIDERS, hero_service_1.HeroService]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

@@ -6,3 +6,6 @@ node_modules
 
 # ignore log files
 *.log
+
+# sublime folder
+app/.DS_Store
