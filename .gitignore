@@ -9,3 +9,7 @@ node_modules
 
 # sublime folder
 app/.DS_Store
+
+# ignore js & map files
+*.js
+*.map
