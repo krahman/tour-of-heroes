@@ -11,5 +11,5 @@ import {HeroDetailComponent} from "./hero-detail.component";
     directives: [HeroComponent, ROUTER_DIRECTIVES]
 })
 
-export class HeroesComponent implements OnInit {
+export class HeroesComponent {
 }
